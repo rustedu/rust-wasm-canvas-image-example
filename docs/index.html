@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Rust + Webpack project!</title>
+  <style>
+    #bg_canvas,
+    #text_canvas {
+      display: block;
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      background: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <input id="fileUpload" type="file" accept="image/*" />
+    <input id="inputText" type="text" />
+
+    <canvas id="bg_canvas" width="500px" height="500px"></canvas>
+    <canvas id="text_canvas" width="500px" height="500px"></canvas>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
