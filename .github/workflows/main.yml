@@ -40,7 +40,8 @@ jobs:
           git config --global user.name "Jack-Zhang-1314"
           git reset --hard
           git checkout main
+          git pull
           mv ./canvas-front/dist ./docs
           git add ./docs
           git commit -m "build docs"
-          git push -f origin dev
+          git push -f origin main
