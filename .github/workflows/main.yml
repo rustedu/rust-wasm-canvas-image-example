@@ -25,11 +25,13 @@ jobs:
       - name: install wasm
         run: |
           cargo install wasm-pack
-          wasm-pack build canvas-rs
+          wasm-pack build canvas-rs --target web
       - name: install yarn
         run: |
+          cd canvas-front
           npm install
           npm run build
+          cd ..
       - name: use-git
         run: |
           git config --local user.email "zyj17715640603@gmail.com"
