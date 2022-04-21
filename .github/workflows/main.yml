@@ -1,0 +1,44 @@
+# @format
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clone git
+        uses: actions/checkout@v2
+      - name: install nodejs
+        uses: actions/setup-node@v3.0.0
+        with:
+          node-version: "16.x"
+      - name: install rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: install wasm
+        run: |
+          cargo install wasm-pack
+          wasm-pack build canvas-rs --target web
+      - name: install yarn
+        run: |
+          cd canvas-front
+          npm install
+          npm run build
+          cd ..
+      - name: use-git
+        run: |
+          git config --local user.email "zyj17715640603@gmail.com"
+          git config --local user.name "Jack-Zhang-1314"
+          git remote set-url origin https://Jack-Zhang-1314:${{secrets.ACTION_ACCESS}}@github.com/Jack-Zhang-1314/rust-wasm-canvas-image-example.git
+          git checkout -b dev
+          mv ./canvas-front/dist ./docs
+          git add ./docs
+          git commit -m "build docs"
+          git push -f origin dev
