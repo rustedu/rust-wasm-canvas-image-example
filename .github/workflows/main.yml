@@ -38,7 +38,8 @@ jobs:
         run: |
           git config --global user.email "zyj17715640603@gmail.com"
           git config --global user.name "Jack-Zhang-1314"
-          git checkout -b main
+          git reset --hard
+          git checkout main
           mv ./canvas-front/dist ./docs
           git add ./docs
           git commit -m "build docs"
