@@ -1,6 +1,6 @@
 import { greet } from '../../canvas-rs/pkg'
 
-// greet()
+greet()
 
 
 window.onload = () => {

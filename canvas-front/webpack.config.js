@@ -8,6 +8,7 @@ module.exports = {
   },
   experiments: {
     asyncWebAssembly: true,
+    syncWebAssembly: true,
   },
   output: {
     path: dist,
