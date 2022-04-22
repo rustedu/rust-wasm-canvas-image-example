@@ -78,7 +78,6 @@ dependencies = [
  "base64",
  "image",
  "imageproc",
- "js-sys",
  "rusttype",
  "wasm-bindgen",
  "web-sys",

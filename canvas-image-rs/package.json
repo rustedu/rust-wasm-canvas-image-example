@@ -1,8 +1,9 @@
 {
     "scripts": {
-      "build": "webpack",
+      "build": "NODE_ENV=production webpack",
       "serve" : "webpack serve --port 3001"
     },
+    "license": "MIT",
     "devDependencies": {
       "@wasm-tool/wasm-pack-plugin": "1.5.0",
       "text-encoding": "^0.7.0",
