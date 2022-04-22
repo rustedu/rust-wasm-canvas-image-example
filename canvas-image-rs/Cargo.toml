@@ -1,0 +1,31 @@
+[package]
+name = "canvas-image-font"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+js-sys = "0.3.57"
+wasm-bindgen = "0.2"
+base64 = "0.13.0"
+rusttype = "0.9.2"
+image = "0.24.1"
+imageproc = "0.23.0"
+
+[dependencies.web-sys]
+version = "0.3.57"
+features = [
+  'console',
+  'CanvasRenderingContext2d',
+  'Document',
+  'Element',
+  'HtmlElement',
+  'HtmlCanvasElement',
+  'Node',
+  'Window',
+  'FileReader'
+]
