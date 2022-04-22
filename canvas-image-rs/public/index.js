@@ -31,8 +31,8 @@ const handleUploadFile = function(event) {
             let buffer = e.target.result;
             // waiting rust process upload image
             wasm.then(m => {
-                let base64result = new Uint8Array(buffer)
-                let blob =  m.process_image(base64result, value, size, color, +position.x, +position.y)
+                let base64Buffer = new Uint8Array(buffer)
+                let blob = m.process_image(base64Buffer, value, size, color, +position.x, +position.y)
                 document.getElementById("output").src = "data:image/png;base64, " + blob;
             })
             
