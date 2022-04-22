@@ -1,7 +1,7 @@
 [package]
 name = "canvas-rs"
 version = "0.1.0"
-authors = ["wuls <linsheng.wu@beantechs.com>"]
+authors = ["wulinsheng"]
 edition = "2018"
 
 [lib]
