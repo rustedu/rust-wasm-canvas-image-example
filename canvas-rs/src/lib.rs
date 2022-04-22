@@ -1,3 +1,4 @@
+mod diagram;
 mod utils;
 
 use wasm_bindgen::prelude::*;
@@ -9,8 +10,14 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
+extern "C" {
     fn alert(s: &str);
+    
+    #[wasm_bindgen(js_namespace = console)]
+    fn error(s: &str);
+
+    #[wasm_bindgen(js_namespace = console)]
+    fn log(s: &str);
 }
 
 #[wasm_bindgen]
