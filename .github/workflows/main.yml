@@ -38,6 +38,8 @@ jobs:
         run: |
           git config --global user.email "zyj17715640603@gmail.com"
           git config --global user.name "Jack-Zhang-1314"
+          rm -f canvas-front/yarn.lock
+          rm -f canvas-front/package-lock.json
           rm -rf ./docs
           mv ./canvas-front/dist ./docs
           git add ./docs

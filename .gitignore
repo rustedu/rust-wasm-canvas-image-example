@@ -1,2 +1,4 @@
+target
+pkg
+node_modules
 canvas-front/yarn.lock
-canvas-front/package-lock.json
