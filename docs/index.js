@@ -1,1 +1,393 @@
-(()=>{"use strict";var n,e,t,r,o,_,c={138:(n,e,t)=>{t.a(n,(async(n,e)=>{try{var r=t(0),o=n([r]);r=(o.then?(await o)():o)[0],window.onload=function(){try{console.log(11);let n=new r.S0("canvas_box","#fileUpload","inputText");setTimeout((()=>{n.init()}),3e3)}catch(n){console.log(n)}},e()}catch(n){e(n)}}))},0:(n,e,t)=>{t.a(n,(async(r,o)=>{try{t.d(e,{B7:()=>fn,B_:()=>L,C4:()=>F,CC:()=>z,HS:()=>H,Ij:()=>Y,Ip:()=>Sn,JT:()=>$,Jq:()=>bn,KK:()=>M,KQ:()=>hn,NS:()=>dn,OF:()=>wn,Or:()=>xn,S0:()=>T,TL:()=>ln,Wb:()=>W,Wn:()=>J,XP:()=>yn,_3:()=>gn,bx:()=>D,d$:()=>cn,dE:()=>on,dO:()=>Z,fO:()=>k,fY:()=>vn,fi:()=>K,hy:()=>U,jo:()=>_n,js:()=>V,k4:()=>P,m_:()=>I,nf:()=>rn,ns:()=>an,o7:()=>tn,oG:()=>q,pZ:()=>nn,py:()=>R,q5:()=>G,qB:()=>N,qM:()=>un,qt:()=>A,u1:()=>Q,uS:()=>en,ug:()=>B,vm:()=>mn,xB:()=>pn,xH:()=>sn,xm:()=>X});var _=t(82);n=t.hmd(n);var c=r([_]);_=(c.then?(await c)():c)[0];const i=new Array(32).fill(void 0);function a(n){return i[n]}i.push(void 0,null,!0,!1);let u=i.length;function f(n){n<36||(i[n]=u,u=n)}function d(n){const e=a(n);return f(n),e}function s(n){u===i.length&&i.push(i.length+1);const e=u;return u=i[e],i[e]=n,e}let b=0,l=null;function g(){return null!==l&&l.buffer===_.memory.buffer||(l=new Uint8Array(_.memory.buffer)),l}let w=new("undefined"==typeof TextEncoder?(0,n.require)("util").TextEncoder:TextEncoder)("utf-8");const p="function"==typeof w.encodeInto?function(n,e){return w.encodeInto(n,e)}:function(n,e){const t=w.encode(n);return e.set(t),{read:n.length,written:t.length}};function h(n,e,t){if(void 0===t){const t=w.encode(n),r=e(t.length);return g().subarray(r,r+t.length).set(t),b=t.length,r}let r=n.length,o=e(r);const _=g();let c=0;for(;c<r;c++){const e=n.charCodeAt(c);if(e>127)break;_[o+c]=e}if(c!==r){0!==c&&(n=n.slice(c)),o=t(o,r,r=c+3*n.length);const e=g().subarray(o+c,o+r);c+=p(n,e).written}return b=c,o}function m(n){return null==n}let y=null;function v(){return null!==y&&y.buffer===_.memory.buffer||(y=new Int32Array(_.memory.buffer)),y}function x(n){const e=typeof n;if("number"==e||"boolean"==e||null==n)return`${n}`;if("string"==e)return`"${n}"`;if("symbol"==e){const e=n.description;return null==e?"Symbol":`Symbol(${e})`}if("function"==e){const e=n.name;return"string"==typeof e&&e.length>0?`Function(${e})`:"Function"}if(Array.isArray(n)){const e=n.length;let t="[";e>0&&(t+=x(n[0]));for(let r=1;r<e;r++)t+=", "+x(n[r]);return t+="]",t}const t=/\[object ([^\]]+)\]/.exec(toString.call(n));let r;if(!(t.length>1))return toString.call(n);if(r=t[1],"Object"==r)try{return"Object("+JSON.stringify(n)+")"}catch(n){return"Object"}return n instanceof Error?`${n.name}: ${n.message}\n${n.stack}`:r}let S=new("undefined"==typeof TextDecoder?(0,n.require)("util").TextDecoder:TextDecoder)("utf-8",{ignoreBOM:!0,fatal:!0});function C(n,e){return S.decode(g().subarray(n,n+e))}function E(n,e,t,r){const o={a:n,b:e,cnt:1,dtor:t},c=(...n)=>{o.cnt++;const e=o.a;o.a=0;try{return r(e,o.b,...n)}finally{0==--o.cnt?_.__wbindgen_export_2.get(o.dtor)(e,o.b):o.a=e}};return c.original=o,c}function j(n,e,t){_._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__haf6ba348e74f8d8d(n,e,s(t))}function O(n,e){try{return n.apply(this,e)}catch(n){_.__wbindgen_exn_store(s(n))}}S.decode();class T{static __wrap(n){const e=Object.create(T.prototype);return e.ptr=n,e}__destroy_into_raw(){const n=this.ptr;return this.ptr=0,n}free(){const n=this.__destroy_into_raw();_.__wbg_diagram_free(n)}constructor(n,e,t){const r=h(n,_.__wbindgen_malloc,_.__wbindgen_realloc),o=b,c=h(e,_.__wbindgen_malloc,_.__wbindgen_realloc),i=b,a=h(t,_.__wbindgen_malloc,_.__wbindgen_realloc),u=b,f=_.diagram_new(r,o,c,i,a,u);return T.__wrap(f)}init(){_.diagram_init(this.ptr)}init_upload(){_.diagram_init_upload(this.ptr)}}function B(n){d(n)}function q(n,e){console.error(C(n,e))}function I(n){return s(a(n))}function A(n,e){const t=a(e),r="string"==typeof t?t:void 0;var o=m(r)?0:h(r,_.__wbindgen_malloc,_.__wbindgen_realloc),c=b;v()[n/4+1]=c,v()[n/4+0]=o}function R(n,e){console.log(C(n,e))}function $(n,e){alert(C(n,e))}function k(n){return a(n)instanceof Window}function F(n){const e=a(n).document;return m(e)?0:s(e)}function W(){return O((function(n,e,t){return s(a(n).createElement(C(e,t)))}),arguments)}function H(n,e,t){const r=a(n).getElementById(C(e,t));return m(r)?0:s(r)}function L(){return O((function(n,e,t){const r=a(n).querySelector(C(e,t));return m(r)?0:s(r)}),arguments)}function M(n){return a(n)instanceof HTMLCanvasElement}function P(n,e){a(n).width=e>>>0}function D(n,e){a(n).height=e>>>0}function K(){return O((function(n,e,t){const r=a(n).getContext(C(e,t));return m(r)?0:s(r)}),arguments)}function N(n,e,t){a(n).textContent=0===e?void 0:C(e,t)}function J(){return O((function(n,e){return s(a(n).appendChild(a(e)))}),arguments)}function U(){return O((function(n,e){return s(a(n).removeChild(a(e)))}),arguments)}function G(n){return a(n).width}function Q(n){return a(n).height}function X(n){return a(n)instanceof FileReader}function Y(){return O((function(n){return s(a(n).result)}),arguments)}function Z(n,e){a(n).onloadend=a(e)}function z(){return O((function(){return s(new FileReader)}),arguments)}function V(){return O((function(n,e){a(n).readAsDataURL(a(e))}),arguments)}function nn(n,e,t){a(n).className=C(e,t)}function en(n){return s(a(n).getBoundingClientRect())}function tn(n,e){a(n).onload=a(e)}function rn(n){return a(n)instanceof CanvasRenderingContext2D}function on(){return O((function(n,e,t,r,o,_){a(n).drawImage(a(e),t,r,o,_)}),arguments)}function _n(n,e,t,r,o){a(n).clearRect(e,t,r,o)}function cn(n){return a(n)instanceof HTMLInputElement}function an(n){const e=a(n).files;return m(e)?0:s(e)}function un(){return O((function(n,e,t,r){a(n).addEventListener(C(e,t),a(r))}),arguments)}function fn(n,e){const t=a(n)[e>>>0];return m(t)?0:s(t)}function dn(n){const e=a(n).target;return m(e)?0:s(e)}function sn(n,e,t){a(n).src=C(e,t)}function bn(){return O((function(){return s(new Image)}),arguments)}function ln(n,e){return s(new Function(C(n,e)))}function gn(){return O((function(n,e){return s(a(n).call(a(e)))}),arguments)}function wn(){return O((function(){return s(self.self)}),arguments)}function pn(){return O((function(){return s(window.window)}),arguments)}function hn(){return O((function(){return s(globalThis.globalThis)}),arguments)}function mn(){return O((function(){return s(t.g.global)}),arguments)}function yn(n){return void 0===a(n)}function vn(n,e){const t=h(x(a(e)),_.__wbindgen_malloc,_.__wbindgen_realloc),r=b;v()[n/4+1]=r,v()[n/4+0]=t}function xn(n,e){throw new Error(C(n,e))}function Sn(n,e,t){return s(E(n,e,31,j))}o()}catch(Cn){o(Cn)}}))},82:(n,e,t)=>{t.a(n,(async(r,o)=>{try{var _,c=r([_=t(0)]),[_]=c.then?(await c)():c;await t.v(e,n.id,"12c91df3f20ab454b1c2",{"./canvas_rs_bg.js":{__wbindgen_object_drop_ref:_.ug,__wbg_error_3b77d5937dec4d9c:_.oG,__wbindgen_object_clone_ref:_.m_,__wbindgen_string_get:_.qt,__wbg_log_3151425f023a7335:_.py,__wbg_alert_ef81b59062930f07:_.JT,__wbg_instanceof_Window_0e6c0f1096d66c3c:_.fO,__wbg_document_99eddbbc11ec831e:_.C4,__wbg_createElement_3c9b5f3aa42457a1:_.Wb,__wbg_getElementById_f83c5de20dc455d6:_.HS,__wbg_querySelector_c03126fc82664294:_.B_,__wbg_instanceof_HtmlCanvasElement_b94545433bb4d2ef:_.KK,__wbg_setwidth_654d8adcd4979eed:_.k4,__wbg_setheight_2b662384bfacb65c:_.bx,__wbg_getContext_0c19ba5c037e057f:_.fi,__wbg_settextContent_2f06df37ffdb33e7:_.qB,__wbg_appendChild_a86c0da8d152eae4:_.Wn,__wbg_removeChild_b4ce6c8d6e5d47be:_.hy,__wbg_width_a260098679e33e90:_.q5,__wbg_height_1f8574470ebe45c9:_.u1,__wbg_instanceof_FileReader_0e41169d52ec9acc:_.xm,__wbg_result_051b2f9d2fefdb44:_.Ij,__wbg_setonloadend_a3ed4e39df9d6497:_.dO,__wbg_new_8b10b6010dadf210:_.CC,__wbg_readAsDataURL_e6e5d3b77c9e8c2b:_.js,__wbg_setclassName_5b387ce4e3facf5e:_.pZ,__wbg_getBoundingClientRect_ab935d65fdd23c25:_.uS,__wbg_setonload_09beea2b050a3778:_.o7,__wbg_instanceof_CanvasRenderingContext2d_405495bb0ea92c4f:_.nf,__wbg_drawImage_3e95eb71734641cf:_.dE,__wbg_clearRect_5e0469d0d11a7aee:_.jo,__wbg_instanceof_HtmlInputElement_750fccab172eab35:_.d$,__wbg_files_bb62a3b4d73b2fc9:_.ns,__wbg_addEventListener_78d3aa7e06ee5b73:_.qM,__wbg_get_bbde85c2e4ce9183:_.B7,__wbg_target_46fd3a29f64b0e43:_.NS,__wbg_setsrc_6567add4fbef51e3:_.xH,__wbg_new_944851407ca613d7:_.Jq,__wbg_newnoargs_e23b458e372830de:_.TL,__wbg_call_ae78342adc33730a:_._3,__wbg_self_99737b4dcdf6f0d8:_.OF,__wbg_window_9b61fbbf3564c4fb:_.xB,__wbg_globalThis_8e275ef40caea3a3:_.KQ,__wbg_global_5de1e0f82bddcd27:_.vm,__wbindgen_is_undefined:_.XP,__wbindgen_debug_string:_.fY,__wbindgen_throw:_.Or,__wbindgen_closure_wrapper91:_.Ip}}),o()}catch(n){o(n)}}),1)}},i={};function a(n){var e=i[n];if(void 0!==e)return e.exports;var t=i[n]={id:n,loaded:!1,exports:{}};return c[n](t,t.exports,a),t.loaded=!0,t.exports}n="function"==typeof Symbol?Symbol("webpack then"):"__webpack_then__",e="function"==typeof Symbol?Symbol("webpack exports"):"__webpack_exports__",t="function"==typeof Symbol?Symbol("webpack error"):"__webpack_error__",r=n=>{n&&(n.forEach((n=>n.r--)),n.forEach((n=>n.r--?n.r++:n())))},o=n=>!--n.r&&n(),_=(n,e)=>n?n.push(e):o(e),a.a=(c,i,a)=>{var u,f,d,s=a&&[],b=c.exports,l=!0,g=!1,w=(e,t,r)=>{g||(g=!0,t.r+=e.length,e.map(((e,o)=>e[n](t,r))),g=!1)},p=new Promise(((n,e)=>{d=e,f=()=>(n(b),r(s),s=0)}));p[e]=b,p[n]=(n,e)=>{if(l)return o(n);u&&w(u,n,e),_(s,n),p.catch(e)},c.exports=p,i((c=>{var i;u=(c=>c.map((c=>{if(null!==c&&"object"==typeof c){if(c[n])return c;if(c.then){var i=[];c.then((n=>{a[e]=n,r(i),i=0}),(n=>{a[t]=n,r(i),i=0}));var a={};return a[n]=(n,e)=>(_(i,n),c.catch(e)),a}}var u={};return u[n]=n=>o(n),u[e]=c,u})))(c);var a=()=>u.map((n=>{if(n[t])throw n[t];return n[e]})),f=new Promise(((n,e)=>{(i=()=>n(a)).r=0,w(u,i,e)}));return i.r?f:a()}),(n=>(n&&d(p[t]=n),f()))),l=!1},a.d=(n,e)=>{for(var t in e)a.o(e,t)&&!a.o(n,t)&&Object.defineProperty(n,t,{enumerable:!0,get:e[t]})},a.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(n){if("object"==typeof window)return window}}(),a.hmd=n=>((n=Object.create(n)).children||(n.children=[]),Object.defineProperty(n,"exports",{enumerable:!0,set:()=>{throw new Error("ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: "+n.id)}}),n),a.o=(n,e)=>Object.prototype.hasOwnProperty.call(n,e),a.v=(n,e,t,r)=>{var o=fetch(a.p+""+t+".module.wasm");return"function"==typeof WebAssembly.instantiateStreaming?WebAssembly.instantiateStreaming(o,r).then((e=>Object.assign(n,e.instance.exports))):o.then((n=>n.arrayBuffer())).then((n=>WebAssembly.instantiate(n,r))).then((e=>Object.assign(n,e.instance.exports)))},(()=>{var n;a.g.importScripts&&(n=a.g.location+"");var e=a.g.document;if(!n&&e&&(e.currentScript&&(n=e.currentScript.src),!n)){var t=e.getElementsByTagName("script");t.length&&(n=t[t.length-1].src)}if(!n)throw new Error("Automatic publicPath is not supported in this browser");n=n.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),a.p=n})(),a(138)})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./public/index.js":
+/*!*************************!*\
+  !*** ./public/index.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const wasm = Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_text-encoding_index_js\"), __webpack_require__.e(\"pkg_index_js\")]).then(__webpack_require__.bind(__webpack_require__, /*! ../pkg */ \"./pkg/index.js\"))\n\nlet data = {\n    file: null,\n    text:  {\n        value: '想插入的文字中文hello',\n        size: 40,\n        color: 'red',\n        position: { x: 50.0, y: 50.0 }\n    },\n}\nlet dom = {\n    upload: null,\n    inputText: null,\n    inputSize: null,\n    radios: null ,\n    posX: null,\n    posY: null\n}\n\nconst handleUploadFile = function(event) {\n\n    console.log(data.text)\n    const { value, size, color, position } = data.text\n    if(value && size && color && position.x && position.y ) {\n\n        const fr = new FileReader();\n        const file = event.target.files[0]\n\n        fr.addEventListener(\"load\", function(e) {\n            let buffer = e.target.result;\n            // waiting rust process upload image\n            wasm.then(m => {\n                let base64Buffer = new Uint8Array(buffer)\n                let blob = m.process_image(base64Buffer, value, size, color, +position.x, +position.y)\n                document.getElementById(\"output\").src = \"data:image/png;base64, \" + blob;\n            })\n            \n        })\n        \n        fr.readAsArrayBuffer(file)\n    } else {\n        alert(\"Please complated text info editing!\")\n    }\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", function() { \n    dom.upload = document.getElementById('upload');\n    dom.inputText = document.getElementById('text-input');\n    dom.inputSize = document.getElementById('text-size');\n    dom.radios = document.querySelectorAll('input[type=radio][name=\"color\"]');\n    dom.posX = document.getElementById('position-x');\n    dom.posY = document.getElementById('position-y');\n\n\n    // upload\n    dom.upload.addEventListener('change', handleUploadFile);\n\n    // text\n    dom.inputText.value = data.text.value;\n    dom.inputText.addEventListener('change', function(event) {\n        data.text.value = event.target.value.trim();\n    });\n    // size\n    dom.inputSize.value = data.text.size;\n    dom.inputSize.addEventListener('change', function(event) {\n        data.text.size = event.target.value.trim();\n    });\n    \n    // color\n    function radioChange() {\n        data.text.color = this.value\n    }\n    Array.prototype.forEach.call(dom.radios, function(radio) {\n        radio.addEventListener('change', radioChange);\n    });\n\n    // position\n    dom.posX.value = data.text.position.x;\n    dom.posX.addEventListener('change', function(event) {\n        data.text.position.x = event.target.value.trim();\n    });\n    dom.posY.value = data.text.position.y;\n    dom.posY.addEventListener('change', function(event) {\n        data.text.position.y = event.target.value.trim();\n    });\n});\n\n//# sourceURL=webpack:///./public/index.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/async module */
+/******/ 	(() => {
+/******/ 		var webpackThen = typeof Symbol === "function" ? Symbol("webpack then") : "__webpack_then__";
+/******/ 		var webpackExports = typeof Symbol === "function" ? Symbol("webpack exports") : "__webpack_exports__";
+/******/ 		var webpackError = typeof Symbol === "function" ? Symbol("webpack error") : "__webpack_error__";
+/******/ 		var completeQueue = (queue) => {
+/******/ 			if(queue) {
+/******/ 				queue.forEach((fn) => (fn.r--));
+/******/ 				queue.forEach((fn) => (fn.r-- ? fn.r++ : fn()));
+/******/ 			}
+/******/ 		}
+/******/ 		var completeFunction = (fn) => (!--fn.r && fn());
+/******/ 		var queueFunction = (queue, fn) => (queue ? queue.push(fn) : completeFunction(fn));
+/******/ 		var wrapDeps = (deps) => (deps.map((dep) => {
+/******/ 			if(dep !== null && typeof dep === "object") {
+/******/ 				if(dep[webpackThen]) return dep;
+/******/ 				if(dep.then) {
+/******/ 					var queue = [];
+/******/ 					dep.then((r) => {
+/******/ 						obj[webpackExports] = r;
+/******/ 						completeQueue(queue);
+/******/ 						queue = 0;
+/******/ 					}, (e) => {
+/******/ 						obj[webpackError] = e;
+/******/ 						completeQueue(queue);
+/******/ 						queue = 0;
+/******/ 					});
+/******/ 					var obj = {};
+/******/ 					obj[webpackThen] = (fn, reject) => (queueFunction(queue, fn), dep['catch'](reject));
+/******/ 					return obj;
+/******/ 				}
+/******/ 			}
+/******/ 			var ret = {};
+/******/ 			ret[webpackThen] = (fn) => (completeFunction(fn));
+/******/ 			ret[webpackExports] = dep;
+/******/ 			return ret;
+/******/ 		}));
+/******/ 		__webpack_require__.a = (module, body, hasAwait) => {
+/******/ 			var queue = hasAwait && [];
+/******/ 			var exports = module.exports;
+/******/ 			var currentDeps;
+/******/ 			var outerResolve;
+/******/ 			var reject;
+/******/ 			var isEvaluating = true;
+/******/ 			var nested = false;
+/******/ 			var whenAll = (deps, onResolve, onReject) => {
+/******/ 				if (nested) return;
+/******/ 				nested = true;
+/******/ 				onResolve.r += deps.length;
+/******/ 				deps.map((dep, i) => (dep[webpackThen](onResolve, onReject)));
+/******/ 				nested = false;
+/******/ 			};
+/******/ 			var promise = new Promise((resolve, rej) => {
+/******/ 				reject = rej;
+/******/ 				outerResolve = () => (resolve(exports), completeQueue(queue), queue = 0);
+/******/ 			});
+/******/ 			promise[webpackExports] = exports;
+/******/ 			promise[webpackThen] = (fn, rejectFn) => {
+/******/ 				if (isEvaluating) { return completeFunction(fn); }
+/******/ 				if (currentDeps) whenAll(currentDeps, fn, rejectFn);
+/******/ 				queueFunction(queue, fn);
+/******/ 				promise['catch'](rejectFn);
+/******/ 			};
+/******/ 			module.exports = promise;
+/******/ 			body((deps) => {
+/******/ 				currentDeps = wrapDeps(deps);
+/******/ 				var fn;
+/******/ 				var getResult = () => (currentDeps.map((d) => {
+/******/ 					if(d[webpackError]) throw d[webpackError];
+/******/ 					return d[webpackExports];
+/******/ 				}))
+/******/ 				var promise = new Promise((resolve, reject) => {
+/******/ 					fn = () => (resolve(getResult));
+/******/ 					fn.r = 0;
+/******/ 					whenAll(currentDeps, fn, reject);
+/******/ 				});
+/******/ 				return fn.r ? promise : getResult();
+/******/ 			}, (err) => (err && reject(promise[webpackError] = err), outerResolve()));
+/******/ 			isEvaluating = false;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/ensure chunk */
+/******/ 	(() => {
+/******/ 		__webpack_require__.f = {};
+/******/ 		// This file contains only the entry chunk.
+/******/ 		// The chunk loading function for additional chunks
+/******/ 		__webpack_require__.e = (chunkId) => {
+/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
+/******/ 				__webpack_require__.f[key](chunkId, promises);
+/******/ 				return promises;
+/******/ 			}, []));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get javascript chunk filename */
+/******/ 	(() => {
+/******/ 		// This function allow to reference async chunks
+/******/ 		__webpack_require__.u = (chunkId) => {
+/******/ 			// return url for filenames based on template
+/******/ 			return "" + chunkId + ".index.js";
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/harmony module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.hmd = (module) => {
+/******/ 			module = Object.create(module);
+/******/ 			if (!module.children) module.children = [];
+/******/ 			Object.defineProperty(module, 'exports', {
+/******/ 				enumerable: true,
+/******/ 				set: () => {
+/******/ 					throw new Error('ES Modules may not assign module.exports or exports.*, Use ESM export syntax, instead: ' + module.id);
+/******/ 				}
+/******/ 			});
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/load script */
+/******/ 	(() => {
+/******/ 		var inProgress = {};
+/******/ 		// data-webpack is not used as build has no uniqueName
+/******/ 		// loadScript function to load a script via script tag
+/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
+/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
+/******/ 			var script, needAttach;
+/******/ 			if(key !== undefined) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				for(var i = 0; i < scripts.length; i++) {
+/******/ 					var s = scripts[i];
+/******/ 					if(s.getAttribute("src") == url) { script = s; break; }
+/******/ 				}
+/******/ 			}
+/******/ 			if(!script) {
+/******/ 				needAttach = true;
+/******/ 				script = document.createElement('script');
+/******/ 		
+/******/ 				script.charset = 'utf-8';
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
+/******/ 				}
+/******/ 		
+/******/ 				script.src = url;
+/******/ 			}
+/******/ 			inProgress[url] = [done];
+/******/ 			var onScriptComplete = (prev, event) => {
+/******/ 				// avoid mem leaks in IE.
+/******/ 				script.onerror = script.onload = null;
+/******/ 				clearTimeout(timeout);
+/******/ 				var doneFns = inProgress[url];
+/******/ 				delete inProgress[url];
+/******/ 				script.parentNode && script.parentNode.removeChild(script);
+/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
+/******/ 				if(prev) return prev(event);
+/******/ 			}
+/******/ 			;
+/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
+/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
+/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
+/******/ 			needAttach && document.head.appendChild(script);
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/wasm loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.v = (exports, wasmModuleId, wasmModuleHash, importsObj) => {
+/******/ 			var req = fetch(__webpack_require__.p + "" + wasmModuleHash + ".module.wasm");
+/******/ 			if (typeof WebAssembly.instantiateStreaming === 'function') {
+/******/ 				return WebAssembly.instantiateStreaming(req, importsObj)
+/******/ 					.then((res) => (Object.assign(exports, res.instance.exports)));
+/******/ 			}
+/******/ 			return req
+/******/ 				.then((x) => (x.arrayBuffer()))
+/******/ 				.then((bytes) => (WebAssembly.instantiate(bytes, importsObj)))
+/******/ 				.then((res) => (Object.assign(exports, res.instance.exports)));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
+/******/ 				// JSONP chunk loading for javascript
+/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
+/******/ 		
+/******/ 					// a Promise means "currently loading".
+/******/ 					if(installedChunkData) {
+/******/ 						promises.push(installedChunkData[2]);
+/******/ 					} else {
+/******/ 						if(true) { // all chunks have JS
+/******/ 							// setup Promise in chunk cache
+/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
+/******/ 							promises.push(installedChunkData[2] = promise);
+/******/ 		
+/******/ 							// start chunk loading
+/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
+/******/ 							// create error before stack unwound to get useful stacktrace later
+/******/ 							var error = new Error();
+/******/ 							var loadingEnded = (event) => {
+/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
+/******/ 									installedChunkData = installedChunks[chunkId];
+/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
+/******/ 									if(installedChunkData) {
+/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 										var realSrc = event && event.target && event.target.src;
+/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 										error.name = 'ChunkLoadError';
+/******/ 										error.type = errorType;
+/******/ 										error.request = realSrc;
+/******/ 										installedChunkData[1](error);
+/******/ 									}
+/******/ 								}
+/******/ 							};
+/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
+/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 					}
+/******/ 				}
+/******/ 		};
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 		
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./public/index.js");
+/******/ 	
+/******/ })()
+;

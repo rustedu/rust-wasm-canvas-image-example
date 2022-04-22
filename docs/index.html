@@ -1,34 +1,75 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Rust + Webpack project!</title>
-  <style>
-    #canvas_box,
-    .canvas {
-      display: block;
-      width: 500px;
-      height: 500px;
-      position: absolute;
-      top: 45px;
-      left: 0;
-      background: transparent;
-    }
-  </style>
-</head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Font on Image </title>
+    <style>
+        .wrapper {
+            width: 800px;
+            height: 600px;
+            margin: 10px auto;
+        }
+        .notice {
+            color: brown;
+        }
+        #text-input {
+            width: 200px;
+        }
+        .text-area input {
+            height: 26px;
+            margin: 10px;
+        }
+        .color-radio {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+    </style>
+<script defer src="index.js"></script></head>
 <body>
-  <div id="app">
-    <input id="fileUpload" type="file" accept="image/*" />
-    <!-- <input  type="text" /> -->
-    <textarea id="inputText"></textarea>
 
-    <!-- <canvas id="bg_canvas" width="500px" height="500px"></canvas>
-    <canvas id="text_canvas" width="500px" height="500px"></canvas> -->
-    <div id="canvas_box"></div>
-  </div>
-  <script src="./index.js"></script>
+    <div class="wrapper">
+        <h3> In order to make it work, need to completed follow form: </h3>
+        <ul>
+            <li> upload image</li>
+            <li> 
+                editing text you wanna insert
+                <ul>
+                    <li> value </li>
+                    <li> style </li>
+                    <li> location </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="form-wrapper">
+            <div>
+                <h3>upload file: (<span class="notice">* just work PNG format</span>)</h3>
+                <input id="upload" type="file" accept="image/*" >
+            </div>
+            <div class="text-area">
+                <h3>edit text:</h3>
+                <span>text: </span> <input id="text-input" type="text" placeholder="input text you wanna insert">
+                <span>size: </span> <input id="text-size" type="number" >
+                <span>color: </span> 
+                <div class="color-radio">
+                    <input type="radio" name="color" value="red" checked> <label for="red">Red</label>
+                    <input type="radio" name="color" value="green" > <label for="green">Green</label>
+                    <input type="radio" name="color" value="blue" > <label for="blue">Blue</label>
+                </div>
+                <div class="text-area">
+                    <span> position x: </span>  <input id="position-x" type="number" >
+                    <span> position y: </span> <input id="position-y" type="number" >
+                </div>
+            </div>
+            <div>
+            <div class="preview">
+                <h3>======================Preview======================</h3>
+                <img id="output"/>
+            </div>
+        </div>
+    </div>
+    
 </body>
-
 </html>
