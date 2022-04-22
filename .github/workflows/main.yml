@@ -41,6 +41,7 @@ jobs:
           git reset --hard
           git checkout main
           git pull
+          rm -rf ./docs
           mv ./canvas-front/dist ./docs
           git add ./docs
           git commit -m "build docs"
