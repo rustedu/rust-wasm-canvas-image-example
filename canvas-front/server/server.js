@@ -5,7 +5,7 @@ const webpackConfig = require('../webpack.config.js');
 const compiler = Webpack(webpackConfig);
 const devServerOptions = {
   ...webpackConfig.devServer,
-  open: true
+  open: false
 };
 const server = new WebpackDevServer(devServerOptions, compiler);
 
