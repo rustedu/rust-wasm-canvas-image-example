@@ -34,14 +34,17 @@ jobs:
           npm install
           npm run build
           cd ..
+          cd canvas-image-rs
+          yarn install
+          yarn build
+          cd ..
       - name: use-git
         run: |
           git config --global user.email "zyj17715640603@gmail.com"
           git config --global user.name "Jack-Zhang-1314"
-          rm -f canvas-front/yarn.lock
-          rm -f canvas-front/package-lock.json
           rm -rf ./docs
-          mv ./canvas-front/dist ./docs
+          mkdir pkg
+          mv ./canvas-image-rs/dist ./docs
           git add ./docs
           git commit -m "build docs"
           git push -f origin main
