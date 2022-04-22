@@ -14,3 +14,27 @@ https://github.com/rust-canvas
 
 * 前端框架
 https://github.com/inokawa/rust-wasm-example
+
+## How to build
+### Clone
+```
+git clone git@github.com:rustedu/rust-wasm-canvas-image-example.git
+cd rust-wasm-canvas-image-example
+```
+
+### build rust crate
+```
+// 在项目的根目录下执行
+$ cargo install wasm-pack
+$ wasm-pack build canvas-rs --target web
+// 成功后在 canvas-rs 子目录下生成 pkg 目录，
+```
+
+### build web front
+```
+cd canvas-front
+npm install
+npm run build
+
+```
+
