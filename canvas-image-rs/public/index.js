@@ -3,10 +3,10 @@ const wasm = import("../pkg")
 let data = {
     file: null,
     text:  {
-        value: '想插入的文字中文hello',
-        size: 40,
-        color: 'red',
-        position: { x: 50.0, y: 50.0 }
+        value: 'Rust 开发',
+        size: 56,
+        color: 'white',
+        position: { x: 142.0, y: 138.0 }
     },
 }
 let dom = {

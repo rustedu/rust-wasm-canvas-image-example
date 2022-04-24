@@ -40,11 +40,6 @@ jobs:
           cd ..
       - name: use-git
         run: |
-          git config --global user.email "zyj17715640603@gmail.com"
-          git config --global user.name "Jack-Zhang-1314"
-          rm -rf ./docs
-          mkdir pkg
-          mv ./canvas-image-rs/dist ./docs
-          git add ./docs
-          git commit -m "build docs"
-          git push -f origin main
+          git config --global user.email "rustwasm@rustedu.com"
+          git config --global user.name "gh-pages"
+          git subtree push --prefix ./canvas-image-rs/dist origin gh-pages

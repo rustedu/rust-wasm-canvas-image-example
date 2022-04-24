@@ -37,19 +37,25 @@ pub fn process_image(
     // just work for png format
     let mut input_image = image::load_from_memory(&image_buffer).unwrap();
 
-   let font = Font::try_from_bytes(include_bytes!("fangzheng.ttf")).unwrap();
-   let scale = Scale {
-       x: size,
-       y: size,
-   };
+    let font = Font::try_from_bytes(include_bytes!("fangzheng.ttf")).unwrap();
+    // let font = Font::try_from_bytes(include_bytes!("simhei.ttf")).unwrap();
+    // let font = Font::try_from_bytes(include_bytes!("msyahei.ttf")).unwrap();
+    let scale = Scale {
+        x: size,
+        y: size,
+    };
 
    console_log!("drawing text");
    if color == "red" {
        draw_text_mut(&mut input_image, image::Rgba([255u8, 0u8, 0u8, 255u8]), x, y, scale, &font, &text);
    } else if color == "green" {
        draw_text_mut(&mut input_image, image::Rgba([0u8, 255u8, 0u8, 255u8]), x, y, scale, &font, &text);
-   } else {
+   } else if color == "blue" {
        draw_text_mut(&mut input_image, image::Rgba([0u8, 0u8, 255u8, 255u8]), x, y, scale, &font, &text);
+   } else if color == "white" {
+       draw_text_mut(&mut input_image, image::Rgba([255u8, 255u8, 255u8, 255u8]), x, y, scale, &font, &text);
+   } else {
+       draw_text_mut(&mut input_image, image::Rgba([0u8, 0u8, 0u8, 255u8]), x, y, scale, &font, &text);
    }
 
    console_log!("writing to buffer, this maybe take long while...");
