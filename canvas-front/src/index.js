@@ -15,9 +15,9 @@ window.onload = function () {
   try {
     console.log(11);
     let d = new Diagram('canvas_box', '#fileUpload', 'inputText')
-    setTimeout(() => {
+    // setTimeout(() => {
       d.init()
-    }, 3000)
+    // }, 3000)
   } catch (error) {
     console.log(error);
   }
