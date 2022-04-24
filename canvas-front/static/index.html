@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <title>My Rust + Webpack project!</title>
   <style>
-    #bg_canvas,
-    #text_canvas {
+    #canvas_box,
+    .canvas {
       display: block;
       width: 500px;
       height: 500px;
@@ -21,12 +21,14 @@
 <body>
   <div id="app">
     <input id="fileUpload" type="file" accept="image/*" />
-    <input id="inputText" type="text" />
+    <!-- <input  type="text" /> -->
+    <textarea id="inputText"></textarea>
 
-    <canvas id="bg_canvas" width="500px" height="500px"></canvas>
-    <canvas id="text_canvas" width="500px" height="500px"></canvas>
+    <!-- <canvas id="bg_canvas" width="500px" height="500px"></canvas>
+    <canvas id="text_canvas" width="500px" height="500px"></canvas> -->
+    <div id="canvas_box"></div>
   </div>
-  <script src="index.js"></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/wulinsheng123/rust-wasm-canvas-image-example.git",
-  "author": "wuls <linsheng.wu@beantechs.com>",
+  "author": "wulinsheng",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
