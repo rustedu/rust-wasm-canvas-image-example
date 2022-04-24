@@ -11,7 +11,8 @@ import { greet, Diagram } from '../../canvas-rs/pkg'
 // greet()
 
 
-window.onload = function () {
+// window.onload = function () {
+  console.log("window onload now!!!");
   try {
     console.log(11);
     let d = new Diagram('canvas_box', '#fileUpload', 'inputText')
@@ -52,4 +53,4 @@ window.onload = function () {
   //     }
   //   })
   // }
-}
+// }

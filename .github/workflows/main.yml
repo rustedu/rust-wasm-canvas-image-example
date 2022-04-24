@@ -40,4 +40,4 @@ jobs:
         run: |
           git config --global user.email "gh-pages@rustedu.com"
           git config --global user.name "gh-pages"
-          
+          git subtree push --prefix canvas-image-rs/dist origin gh-pages
