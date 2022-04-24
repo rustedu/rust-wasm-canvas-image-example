@@ -24,10 +24,9 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+          components: wasm-pack
       - name: install wasm
-        run: |
-          cargo install wasm-pack
-          wasm-pack build canvas-rs
+        run: wasm-pack build canvas-rs
       - name: install yarn
         run: |
           cd canvas-front

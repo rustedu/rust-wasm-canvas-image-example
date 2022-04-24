@@ -12,10 +12,10 @@ window.onload = () => {
   document.getElementById('fileUpload').onchange = (event) => {
     let file = event.target.files[0];
     let reader = new FileReader()
+    let image = new Image();
     reader.readAsDataURL(file)
     reader.onload = function (e) {
       let result = e.target.result
-      var image = new Image();
       image.src = result
       image.onload = function () {
         ctx.drawImage(image, 0, 0, 500, 500);
