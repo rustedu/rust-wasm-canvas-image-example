@@ -37,6 +37,6 @@ jobs:
           cd ..
       - name: use-git
         run: |
-          git config --global user.email "rustwasm@rustedu.com"
+          git config --global user.email "zyj17715640603@gmail.com"
           git config --global user.name "gh-pages"
-          git subtree push --prefix ./canvas-image-rs/dist origin gh-pages
+          git subtree push -f --prefix ./canvas-image-rs/dist origin gh-pages
