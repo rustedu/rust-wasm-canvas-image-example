@@ -24,8 +24,9 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-          components: wasm-pack
-      - name: install wasm
+      - uses: jetli/wasm-pack-action@v0.3.0
+        with:
+          version: "latest"
         run: wasm-pack build canvas-rs
       - name: install yarn
         run: |
