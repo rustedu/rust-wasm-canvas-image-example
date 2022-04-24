@@ -10,6 +10,7 @@ import { greet, Diagram } from '../../canvas-rs/pkg'
 
 // greet()
 
+
 window.onload = function () {
   try {
     console.log(11);
