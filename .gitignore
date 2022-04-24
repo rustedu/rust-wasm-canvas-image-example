@@ -1,6 +1,7 @@
 target
 pkg
 node_modules
+canvas-image-rs/yarn.lock
 canvas-front/yarn.lock
 canvas-front/package-lock.json
 canvas-rs/package-lock.json
