@@ -2,7 +2,6 @@ use wasm_bindgen::prelude::*;
 use imageproc::drawing::{draw_text_mut};
 
  use std::io::Cursor;
- use image::io::Reader as ImageReader;
  use rusttype::{Font, Scale};
 
 #[wasm_bindgen]
