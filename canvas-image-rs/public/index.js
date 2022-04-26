@@ -15,11 +15,14 @@ let dom = {
     inputSize: null,
     radios: null ,
     posX: null,
-    posY: null
+    posY: null,
+    output: null
 }
 
 const handleUploadFile = function(event) {
 
+    dom.output.src = ''
+    dom.downloadBtn.classList.add('download-btn-hidden')
     console.log(data.text)
     const { value, size, color, position } = data.text
     if(value && size && color && position.x && position.y ) {
@@ -33,7 +36,9 @@ const handleUploadFile = function(event) {
             wasm.then(m => {
                 let base64Buffer = new Uint8Array(buffer)
                 let blob = m.process_image(base64Buffer, value, size, color, +position.x, +position.y)
-                document.getElementById("output").src = "data:image/png;base64, " + blob;
+                dom.output.src = "data:image/png;base64, " + blob;
+                dom.output.alt = file.name;
+                dom.downloadBtn.classList.remove('download-btn-hidden')
             })
             
         })
@@ -51,10 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
     dom.radios = document.querySelectorAll('input[type=radio][name="color"]');
     dom.posX = document.getElementById('position-x');
     dom.posY = document.getElementById('position-y');
+    dom.output = document.getElementById("output")
+    dom.downloadBtn = document.getElementById("download-btn")
 
 
     // upload
-    dom.upload.addEventListener('change', handleUploadFile);
+    dom.upload.addEventListener('change', handleUploadFile, false);
 
     // text
     dom.inputText.value = data.text.value;
@@ -84,4 +91,13 @@ document.addEventListener("DOMContentLoaded", function() {
     dom.posY.addEventListener('change', function(event) {
         data.text.position.y = event.target.value.trim();
     });
+
+    // download
+    const downloadImage = () => {
+        const anchor = document.createElement('a');
+        anchor.href = dom.output.src;
+        anchor.download = dom.output.alt
+        anchor.click();
+    }
+    dom.downloadBtn.addEventListener('click', downloadImage)
 });
