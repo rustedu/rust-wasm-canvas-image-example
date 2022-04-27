@@ -43,3 +43,4 @@ jobs:
           git pull
           git commit -am "yarn build new canvas-image-rs/dist"
           git subtree push --prefix canvas-image-rs/dist origin gh-pages
+
