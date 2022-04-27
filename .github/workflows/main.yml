@@ -20,14 +20,11 @@ jobs:
         uses: actions/setup-node@v3.0.0
         with:
           node-version: "16.x"
-      - name: install rust
-        uses: actions-rs/toolchain@v1
+      - uses: jetli/wasm-pack-action@v0.3.0
         with:
-          toolchain: stable
-      - name: install wasm
-        run: |
-          cargo install wasm-pack
-          wasm-pack build canvas-rs
+          version: "latest"
+      - name: build wasm-project
+        run: wasm-pack build canvas-rs
       - name: install yarn
         run: |
           cd canvas-front

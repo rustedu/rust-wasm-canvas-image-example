@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/index.js"
   },
+  devtool: 'source-map',
   experiments: {
     asyncWebAssembly: true,
     syncWebAssembly: true,
