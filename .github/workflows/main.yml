@@ -33,10 +33,14 @@ jobs:
           cd ..
           cd canvas-image-rs
           yarn install
+          rm -rf ./dist
           yarn build
           cd ..
       - name: use-git
         run: |
-          git config --global user.email "zyj17715640603@gmail.com"
+          git config --global user.email "gh-pages@rustedu.com"
           git config --global user.name "gh-pages"
-          git subtree push -f --prefix ./canvas-image-rs/dist origin gh-pages
+          git pull
+          git commit -am "yarn build new canvas-image-rs/dist"
+          git subtree push --prefix canvas-image-rs/dist origin gh-pages
+
