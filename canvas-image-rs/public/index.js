@@ -1,5 +1,6 @@
 const wasm = import("../pkg")
 
+const BASE_64_PROXY = "data:image/png;base64, ";
 let data = {
     file: null,
     text:  {
@@ -9,6 +10,8 @@ let data = {
         position: { x: 142.0, y: 138.0 }
     },
 }
+let currentImageBase64Buffer = null;
+let fileName = ''
 let dom = {
     upload: null,
     inputText: null,
@@ -16,37 +19,46 @@ let dom = {
     radios: null ,
     posX: null,
     posY: null,
-    output: null
+    output: null,
+    loading: null,
+    downloadBtn: null,
+    compositeBtn: null
+}
+
+// waiting rust composite image with text
+const composite = () => {
+    const { value, size, color, position } = data.text
+    if(currentImageBase64Buffer && value && size && color && position.x && position.y) {
+
+        wasm.then(m => {
+            dom.downloadBtn.classList.add('download-btn-hidden')
+            dom.output.src = ''
+            dom.output.alt = ''
+            dom.loading.classList.add('lds-dual-ring')
+            setTimeout(() => {
+                let blob = m.process_image(currentImageBase64Buffer, value, size, color, +position.x, +position.y)
+                dom.output.src = BASE_64_PROXY + blob;
+                dom.output.alt = fileName;
+                dom.downloadBtn.classList.remove('download-btn-hidden')
+                dom.loading.classList.remove('lds-dual-ring')
+            }, 10)
+        })
+    } else {
+        alert("lacking of composite parameters!")
+    }
 }
 
 const handleUploadFile = function(event) {
+    const fr = new FileReader();
+    const file = event.target.files[0]
+    fileName = file.name
 
-    dom.output.src = ''
-    dom.downloadBtn.classList.add('download-btn-hidden')
-    console.log(data.text)
-    const { value, size, color, position } = data.text
-    if(value && size && color && position.x && position.y ) {
-
-        const fr = new FileReader();
-        const file = event.target.files[0]
-
-        fr.addEventListener("load", function(e) {
-            let buffer = e.target.result;
-            // waiting rust process upload image
-            wasm.then(m => {
-                let base64Buffer = new Uint8Array(buffer)
-                let blob = m.process_image(base64Buffer, value, size, color, +position.x, +position.y)
-                dom.output.src = "data:image/png;base64, " + blob;
-                dom.output.alt = file.name;
-                dom.downloadBtn.classList.remove('download-btn-hidden')
-            })
-            
-        })
-        
-        fr.readAsArrayBuffer(file)
-    } else {
-        alert("Please complated text info editing!")
-    }
+    fr.addEventListener("load", function(e) {
+        let buffer = e.target.result;
+        currentImageBase64Buffer = new Uint8Array(buffer)
+    })
+    
+    fr.readAsArrayBuffer(file)
 }
 
 document.addEventListener("DOMContentLoaded", function() { 
@@ -58,6 +70,8 @@ document.addEventListener("DOMContentLoaded", function() {
     dom.posY = document.getElementById('position-y');
     dom.output = document.getElementById("output")
     dom.downloadBtn = document.getElementById("download-btn")
+    dom.compositeBtn = document.getElementById("composite-btn")
+    dom.loading = document.getElementById("loading")
 
 
     // upload
@@ -91,6 +105,9 @@ document.addEventListener("DOMContentLoaded", function() {
     dom.posY.addEventListener('change', function(event) {
         data.text.position.y = event.target.value.trim();
     });
+
+    // composite
+    dom.compositeBtn.addEventListener('click', composite)
 
     // download
     const downloadImage = () => {
