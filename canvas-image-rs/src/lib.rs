@@ -60,7 +60,7 @@ pub fn process_image(
 
    console_log!("writing to buffer, this maybe take long while...");
    let mut bytes: Vec<u8> = Vec::new();
-   input_image.write_to(&mut Cursor::new(&mut bytes), image::ImageOutputFormat::Png).unwrap();
+   input_image.write_to(&mut Cursor::new(&mut bytes), image::ImageOutputFormat::Jpeg(128)).unwrap();
 
    console_log!("encoding base64");
    base64::encode(&bytes)
