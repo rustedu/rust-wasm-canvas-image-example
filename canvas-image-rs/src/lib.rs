@@ -37,9 +37,9 @@ pub fn process_image(
     // just work for png format
     let mut input_image = image::load_from_memory(&image_buffer).unwrap();
 
-    let font = Font::try_from_bytes(include_bytes!("fangzheng.ttf")).unwrap();
+    // let font = Font::try_from_bytes(include_bytes!("fangzheng.ttf")).unwrap();
     // let font = Font::try_from_bytes(include_bytes!("simhei.ttf")).unwrap();
-    // let font = Font::try_from_bytes(include_bytes!("msyahei.ttf")).unwrap();
+    let font = Font::try_from_bytes(include_bytes!("msyahei.ttf")).unwrap();
     let scale = Scale {
         x: size,
         y: size,
